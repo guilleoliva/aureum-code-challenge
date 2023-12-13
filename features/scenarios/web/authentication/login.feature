@@ -1,4 +1,4 @@
-@SWAGS
+@SWAGS @AUREUM
 Feature: Log in into Swags Lab's Web Page
 
   @SR-001 @SMOKE @REGRESSION

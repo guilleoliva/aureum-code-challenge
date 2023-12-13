@@ -1,4 +1,4 @@
-from behave import *
+from behave import step
 
 
 @step('Tom inputs his credentials as "{}"')

@@ -1,4 +1,4 @@
-@SWAGS
+@SWAGS @AUREUM
 Feature: Log out from Swags Lab's Web Page
 
   Background:

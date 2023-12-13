@@ -1,4 +1,4 @@
-@SWAGS
+@SWAGS @AUREUM
 Feature: Inventory Sorts
 
   Background:

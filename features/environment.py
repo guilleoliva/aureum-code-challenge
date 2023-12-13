@@ -33,8 +33,6 @@ def before_all(context):
         "app_name": "Aureum",
         "environment": environment.upper(),
         "execution_tags": os.environ.get("TAGS", "").upper().split(";"),
-        "username": os.environ.get("WEB_APP_USER", None),
-        "password": os.environ.get("WEB_APP_PASS", None),
         "company": "Aureum",
     }
     context.execution_summary_filename = os.path.abspath(

@@ -1,4 +1,4 @@
-@SWAGS
+@SWAGS @AUREUM
 Feature: Happy Path - Buyer's Complete Purchase Process
 
   Background:

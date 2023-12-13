@@ -26,3 +26,15 @@ class BasePage:
 
     def go_to_previous_page(self):
         return self.driver.back()
+
+    def click_on_burger_menu(self):
+        try:
+            self.web_utils.find_element(*self.burger_menu).click()
+        except Exception:
+            raise Exception('Something went wrong, can not get the burger menu item')
+
+    def click_on_log_out(self):
+        try:
+            self.web_utils.find_element(*self.log_out).click()
+        except Exception:
+            raise Exception('Something went wrong, can not get the the log out button')

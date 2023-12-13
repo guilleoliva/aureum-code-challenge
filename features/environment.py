@@ -18,24 +18,24 @@ def before_all(context):
     else:
         environment = context.config.userdata.get("env").lower()
 
-    for env in context.config_data["aereum_envs"]:
+    for env in context.config_data["aureum_envs"]:
         if env["environment"] == environment:
             context.app_url = env["url"]
             context.api_url = env["api"]
             context.users = env['user_type']
 
-    logging.info("{} APP - API URL: {}".format("AEREUM", context.api_url))
+    logging.info("{} APP URL: {} - API URL: {}".format("AUREUM", context.app_url, context.api_url))
 
     # Storing all variables in a context variable
     context.env_config = {
         "app_url": context.app_url,
         "api_url": context.api_url,
-        "app_name": "Aereum",
+        "app_name": "Aureum",
         "environment": environment.upper(),
         "execution_tags": os.environ.get("TAGS", "").upper().split(";"),
         "username": os.environ.get("WEB_APP_USER", None),
         "password": os.environ.get("WEB_APP_PASS", None),
-        "company": "Aereum",
+        "company": "Aureum",
     }
     context.execution_summary_filename = os.path.abspath(
         os.path.join(os.environ.get("OUTPUT"), "..", "output", "execution_summary.txt")

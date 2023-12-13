@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <img alt="Aereum" src="./aureum_logo.png" height="180">
+  <img alt="aureum" src="./aureum_logo.png" height="180">
   </br>
 </div>
 

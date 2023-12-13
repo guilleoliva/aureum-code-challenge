@@ -11,7 +11,7 @@ Feature: Log in into Swags Lab's Web Page
 
   @SR-002 @SMOKE @REGRESSION
   Scenario: Log in with incorrect credentials
-    Given Tom goes to "Aereum" Web APP login page
+    Given Tom goes to "Swags Lab" Web APP login page
     Then Tom should see the "Swags Lab" icon present
     And Tom inputs an incorrect password as "STANDARD-USER"
     And Tom clicks on the Log in button

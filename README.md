@@ -1,4 +1,4 @@
-<div style="text-align:center;">
+<div align="center">
   <br>
   <img alt="Aereum" src="./aureum_logo.png" height="180">
   </br>

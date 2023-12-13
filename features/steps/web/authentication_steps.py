@@ -1,7 +1,5 @@
 from behave import *
 
-from features.steps.api.common_api_steps import valid_user_credentials, verify_delete_request_status
-
 
 @step('Tom inputs his credentials as "{}"')
 def input_credentials(context, user_type):

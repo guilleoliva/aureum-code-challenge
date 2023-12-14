@@ -35,6 +35,7 @@ class BasePage:
 
     def click_on_log_out(self):
         try:
+            time.sleep(0.5)
             self.web_utils.find_element(*self.log_out).click()
         except Exception:
             raise Exception('Something went wrong, can not get the the log out button')

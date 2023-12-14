@@ -8,7 +8,7 @@ Feature: Happy Path - Buyer's Complete Purchase Process
     And Tom clicks on the Log in button
     Then Tom sees the dashboard
 
-  @SR_006 @SMOKE @REGRESSION
+  @SR-006 @SMOKE @REGRESSION
   Scenario: Add items Checkout and Pay
     And Tom wants to add the following items to his cart
     | Item Name                |

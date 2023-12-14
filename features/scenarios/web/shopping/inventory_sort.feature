@@ -8,7 +8,7 @@ Feature: Inventory Sorts
     And Tom clicks on the Log in button
     Then Tom sees the dashboard
 
-  @SR_004 @REGRESSION
+  @SR-004 @REGRESSION
   Scenario Outline: Sort by Price "<order_type>"
     And Tom sees all the prices with no order
     And Tom clicks on sort items by price "<order_type>"
@@ -18,7 +18,7 @@ Feature: Inventory Sorts
     | order_type  |
     | high to low |
 
-  @SR_005 @REGRESSION
+  @SR-005 @REGRESSION
   Scenario Outline: Sort by Name "<order_type>"
     And Tom sees all the names with no order
     And Tom clicks on sort items by name "<order_type>"

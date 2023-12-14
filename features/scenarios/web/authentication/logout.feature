@@ -9,7 +9,7 @@ Feature: Log out from Swags Lab's Web Page
   Then Tom sees the dashboard
 
   @SR-003 @SMOKE @REGRESSION
-  Scenario: Log out with correct Password
+  Scenario: Log out
     And Tom clicks on the burger menu
     When Tom clicks on Log out
     Then Tom logs out correctly

@@ -1,7 +1,3 @@
-import json
-import time
-import uuid
-
 from behave import *
 from faker import Faker
 

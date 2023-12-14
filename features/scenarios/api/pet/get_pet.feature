@@ -1,4 +1,4 @@
-@API @PET @SMOKE @SR-008
+@API @PET @AUREUM
 Feature: [API] Get pet by ID
 
   Background:
@@ -6,6 +6,7 @@ Feature: [API] Get pet by ID
     When the request is made to create a pet
     Then the user is told the request to create was successful
 
+  @SR-008 @SMOKE
   Scenario: Get pet by ID
     When the user wants to get the recently created pet
     Then the user is told the get pet request was successful

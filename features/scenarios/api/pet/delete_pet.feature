@@ -1,4 +1,4 @@
-@API @PET @SMOKE @SR-010
+@API @PET @AUREUM
 Feature: [API] Delete a Pet
 
   Background:
@@ -6,6 +6,7 @@ Feature: [API] Delete a Pet
     When the request is made to create a pet
     Then the user is told the request to create was successful
 
+  @SR-010 @SMOKE
   Scenario: Delete a Pet
     When the request is made to Delete a pet through Petstore's API
     Then the user is told the request to delete was successful

@@ -1,8 +1,8 @@
 from behave import step
 
+from features.pages.check_out_complete_page import CheckOutComplete
 from features.pages.check_out_step_one_page import CheckOutStepOne
 from features.pages.check_out_step_two_page import CheckOutStepTwo
-from features.pages.check_out_complete_page import CheckOutComplete
 
 
 @step('Tom fills the checkout information with his information "{}" "{}" and postal code "{}"')

@@ -23,6 +23,17 @@ def get_joined_url(context, url):
     return urljoin(get_app_url(context), url)
 
 
+def get_access_token(context):
+    context.no_auth = False
+    url = get_joined_url(context, "/web/auth/token")
+    headers = {"content-type": "application/json"}
+    data = {
+        "username": context.env_config["username"],
+        "password": context.env_config["password"],
+    }
+    return requests.post(url, headers=headers, data=json.dumps(data), verify=False)
+
+
 def requests_get(context, url, headers=None):
     request_url, headers = create_request(context, url, headers)
     return requests.get(request_url, headers=headers)

@@ -1,0 +1,45 @@
+name: Automated - E2E tests
+
+on:
+  workflow_call:
+      inputs:
+        tag:
+          type: string
+          description: 'Test scenario tags'
+          required: true
+        target_environment:
+          type: string 
+          description: 'Environment the tests will hit'
+          required: true
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        id: checkout-repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Poetry
+        run: pip3 install poetry
+
+      - name: Install Python package dependencies
+        run: poetry install
+        working-directory: ../../
+      
+      - name: Run tests inside a CI env
+        run: poetry run behavex -t ${{ inputs.tag }} -D env=${{ inputs.target_environment }} -D browser=chrome -D headless_browser
+        working-directory: ../../
+
+      - name: Upload test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: automation report
+          path: ./output
+        if: ${{ always() }}

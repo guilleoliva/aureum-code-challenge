@@ -31,11 +31,11 @@ jobs:
 
       - name: Install Python package dependencies
         run: poetry install
-        working-directory: ../../
+        working-directory: ./
       
       - name: Run tests inside a CI env
         run: poetry run behavex -t ${{ inputs.tag }} -D env=${{ inputs.target_environment }} -D browser=chrome -D headless_browser
-        working-directory: ../../
+        working-directory: ./
 
       - name: Upload test reports
         uses: actions/upload-artifact@v3
